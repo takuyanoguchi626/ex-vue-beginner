@@ -5,8 +5,8 @@
     <div>10年後の年齢：{{ agePlus10 }}</div>
     <!-- ageplus10をキャメルケースに変更 -->
     <div>
-      趣味：<span v-for="hobby of hobbys" :key="hobby">{{ hobby }} </span>
-      <!-- hobbyをhobbysに、hobをhobbyに変更 -->
+      趣味：<span v-for="hobby of hobbies" :key="hobby">{{ hobby }} </span>
+      <!-- hobbyをhobbiesに、hobをhobbyに変更 -->
     </div>
     <div></div>
     <div>
@@ -26,7 +26,7 @@ import { Component, Vue } from "vue-property-decorator";
 export default class XXXComponent extends Vue {
   private name = "野口拓也";
   private age = 24;
-  private hobbys = ["スイム", "バイク", "ラン"];
+  private hobbies = ["スイム", "バイク", "ラン"];
   private link = "#";
   private img = "/pagu.jpg";
 

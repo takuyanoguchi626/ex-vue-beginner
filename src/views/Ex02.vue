@@ -4,7 +4,7 @@
     <div>年齢：{{ age }}歳</div>
     <div>10年後の年齢：{{ agePlus10 }}歳</div>
     <div>
-      趣味：<span v-for="hobby of hobbys" :key="hobby">{{ hobby }} </span>
+      趣味：<span v-for="hobby of hobbies" :key="hobby">{{ hobby }} </span>
     </div>
     <div></div>
     <div>
@@ -25,7 +25,7 @@ import { Component, Vue } from "vue-property-decorator";
 export default class XXXComponent extends Vue {
   private name = "";
   private age = 0;
-  private hobbys = Array<string>();
+  private hobbies = Array<string>();
   private link = "";
   private img = "";
   private button = true;
@@ -37,7 +37,7 @@ export default class XXXComponent extends Vue {
   addStatus(): void {
     this.name = "野口拓也";
     this.age = 24;
-    this.hobbys = ["スイム", "バイク", "ラン"];
+    this.hobbies = ["スイム", "バイク", "ラン"];
     this.link = "#";
     this.img = "/pagu.jpg";
     this.button = false;
