@@ -8,13 +8,15 @@
     </div>
     <div></div>
     <div>
-      <a :href="link" @click="addStatus">自社ページリンク</a>
+      <a :href="link">自社ページリンク</a>
     </div>
     <div>
-      <img :src="img" alt="" />
+      <img :src="img" />
     </div>
     <div>
-      <button type="button" :disabled="button">ボタン</button>
+      <button type="button" @click="addStatus" :disabled="canNotPush">
+        ボタン
+      </button>
     </div>
   </div>
 </template>
@@ -28,7 +30,7 @@ export default class XXXComponent extends Vue {
   private hobbies = Array<string>();
   private link = "";
   private img = "";
-  private button = true;
+  private canNotPush = false;
 
   get agePlus10(): number {
     return this.age + 10;
@@ -40,7 +42,7 @@ export default class XXXComponent extends Vue {
     this.hobbies = ["スイム", "バイク", "ラン"];
     this.link = "#";
     this.img = "/pagu.jpg";
-    this.button = false;
+    this.canNotPush = true;
   }
 }
 </script>

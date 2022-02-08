@@ -1,9 +1,9 @@
 <template>
   <div>
     <div>
-      <input type="number" v-model="num1" />+
-      <input type="number" v-model="num2" />=
-      {{ sum }}
+      <input type="number" v-model.number="num1" />+
+      <input type="number" v-model.number="num2" />=
+      {{ total }}
     </div>
   </div>
 </template>
@@ -15,7 +15,7 @@ export default class XXXComponent extends Vue {
   private num1 = 0;
   private num2 = 0;
 
-  get sum(): number {
+  get total(): number {
     return Number(this.num1) + Number(this.num2);
   }
 }
